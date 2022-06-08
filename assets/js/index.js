@@ -2,6 +2,36 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// function expression to create README
+const createReadMe = ({Title, Description, Installation, Usage, Contribution, Test, License}) => {
+    `#Title
+        ${Title}
+     ##Description
+        ${Description}
+     ##Table of Contents
+        * [Installation](#installation)
+        * [Usage](#installation)
+        * [License](#license)
+        * [Contributing](#contributing)
+        * [Tests](#installation)
+        * [Questions](#questions)
+            ##Installation
+            ${Installation}
+
+            ##Usage
+            ${Usage}
+
+            ##License
+            ${License}
+
+            ##Contributing
+            ${Contribution}
+
+            ##Tests
+            ${Test}     
+    `;
+}
+
 inquirer.prompt([
     {
         type: "input",
@@ -40,4 +70,5 @@ inquirer.prompt([
     }
 ]).then((response) => {
     console.log(response);
+    
 });
