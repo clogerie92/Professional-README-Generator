@@ -3,32 +3,35 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // function expression to create README
-const createReadMe = ({Title, Description, Installation, Usage, Contribution, Test, License}) => {
+const createReadMe = ({Title, Description, Installation, Usage, Contribution, Test, License, Questions}) => {
     return `#Title
-        ${Title}
+     #${Title}
      ##Description
-        ${Description}
+     ${Description}
      ##Table of Contents
-        * [Installation](#installation)
-        * [Usage](#installation)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Tests](#installation)
-        * [Questions](#questions)
-            ##Installation
-            ${Installation}
+     * [Installation](#installation)
+     * [Usage](#installation)
+     * [License](#license)
+     * [Contributing](#contributing)
+     * [Tests](#installation)
+     * [Questions](#questions)
+     ##Installation
+     ${Installation}
 
-            ##Usage
-            ${Usage}
+     ##Usage
+     ${Usage}
 
-            ##License
-            ${License}
+     ##License
+     ${License}
 
-            ##Contributing
-            ${Contribution}
+     ##Contributing
+     ${Contribution}
 
-            ##Tests
-            ${Test}     
+     ##Tests
+     ${Test}
+     
+     ##Questions
+     ${Questions}     
     `;
 }
 
@@ -70,7 +73,7 @@ inquirer.prompt([
     }
 ]).then((response) => {
     console.log(response);
-    fs.writeFile("README.md", createReadMe(response), (error) => {
+    fs.writeFileSync("README.md", createReadMe(response), (error) => {
         error ? console.log(error) : console.log("Successfully created README file!");
     })
 
