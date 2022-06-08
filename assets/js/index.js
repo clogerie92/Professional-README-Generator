@@ -4,7 +4,7 @@ const fs = require("fs");
 
 // function expression to create README
 const createReadMe = ({Title, Description, Installation, Usage, Contribution, Test, License}) => {
-    `#Title
+    return `#Title
         ${Title}
      ##Description
         ${Description}
@@ -70,5 +70,8 @@ inquirer.prompt([
     }
 ]).then((response) => {
     console.log(response);
-    
+    fs.writeFile("README.md", createReadMe(response), (error) => {
+        error ? console.log(error) : console.log("Successfully created README file!");
+    })
+
 });
