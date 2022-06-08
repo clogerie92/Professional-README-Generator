@@ -28,4 +28,8 @@ When the user enters their email address it is then added to the section of the 
 When the user clicks on the links in the Table of Contents they are taken to the corresponding section of the README.
 ```
 
+## Contributer
+Carl Logerie
+Contact: carl.logerie92@gmail.com
+
 
