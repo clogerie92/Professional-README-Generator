@@ -12,7 +12,6 @@ node index.js
 
 ## Description
 
-```md
 When the user is prompted for information about their application repository a high-quality, professional README.md is generated with the title of their project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
 
 When the user enters their project title it is displayed as the title of the README.
@@ -26,7 +25,11 @@ When the user enters their GitHub username it is then added to the section of th
 When the user enters their email address it is then added to the section of the README entitled Questions, with instructions on how to reach them with additional questions.
 
 When the user clicks on the links in the Table of Contents they are taken to the corresponding section of the README.
-```
+
+## Mock Up
+
+![A user completes a series of questions to create a README file.](./images/readme-sample.png)
+
 
 ## Contributer: Carl Logerie
 Contact: carl.logerie92@gmail.com

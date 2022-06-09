@@ -1,10 +1,9 @@
 // dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
-// global variable for license badge function
+// array of licenses
 const licenses = ["Appache", "BSD", "Creative Commons", "MIT"];
-
-// function expression to create README
+// function to create README
 const createReadMe = ({Title, Description, Installation, Usage, Contribution, Test, License, github, email}) => {
 return ` # ${Title}
 
@@ -136,5 +135,5 @@ inquirer.prompt([
     fs.writeFileSync("README.md", createReadMe(response), (error) => {
         error ? console.log(error) : console.log("Successfully created README file!");
     })
-
 });
+
