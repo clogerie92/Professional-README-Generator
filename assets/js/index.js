@@ -3,36 +3,39 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // function expression to create README
-const createReadMe = ({Title, Description, Installation, Usage, Contribution, Test, License, Questions}) => {
-    return `#Title
-     #${Title}
-     ##Description
-     ${Description}
-     ##Table of Contents
-     * [Installation](#installation)
-     * [Usage](#installation)
-     * [License](#license)
-     * [Contributing](#contributing)
-     * [Tests](#installation)
-     * [Questions](#questions)
-     ##Installation
-     ${Installation}
+const createReadMe = ({Title, Description, Installation, Usage, Contribution, Test, License, github, email}) => {
+    return ` # ${Title}
 
-     ##Usage
-     ${Usage}
+## Description
+${Description}
 
-     ##License
-     ${License}
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#installation)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#installation)
+* [Questions](#questions)
 
-     ##Contributing
-     ${Contribution}
+## Installation
+${Installation}
 
-     ##Tests
-     ${Test}
-     
-     ##Questions
-     ${Questions}     
-    `;
+## Usage
+${Usage}
+
+## License
+${License}
+
+## Contributing
+${Contribution}
+
+## Tests
+${Test}
+
+## Questions
+${email}
+
+${github}`;
 }
 
 inquirer.prompt([
@@ -67,10 +70,20 @@ inquirer.prompt([
         message: "Please explain how to test your application."
     },
     {
+        type: "input",
+        name: "github",
+        message: "Please share your github username."
+    },
+    {
+        type: "email",
+        name: "email",
+        message: "Please share your email address."
+    },
+    {
         type: "list",
         name: "License",
-        choices: ["Rutgers", "MIT", "GVL GPL License", "Appache License", "No License"]
-    }
+        choices: ["MIT", "GVL GPL License", "Appache License", "No License"]
+    },
 ]).then((response) => {
     console.log(response);
     fs.writeFileSync("README.md", createReadMe(response), (error) => {
