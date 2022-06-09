@@ -28,7 +28,7 @@ When the user clicks on the links in the Table of Contents they are taken to the
 
 ## Mock Up
 
-![A user completes a series of questions to create a README file.](./images/readme-sample.png)
+![A user completes a series of questions to create a README file.](./assets/images/readme-sample.png)
 
 
 ## Contributer: Carl Logerie
