@@ -31,7 +31,7 @@ When the user clicks on the links in the Table of Contents they are taken to the
 ![A user completes a series of questions to create a README file.](./assets/images/readme-sample.png)
 
 ## Walkthrough Video
-[Watch here] (https://drive.google.com/file/d/1EbGPuYxhv0P812uS5L__N1t_MJ8Jcc4m/view)
+Click here to watch: [walkthrough](https://drive.google.com/file/d/1EbGPuYxhv0P812uS5L__N1t_MJ8Jcc4m/view)
 
 
 ## Contributer: Carl Logerie
